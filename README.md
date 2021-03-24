@@ -1,4 +1,4 @@
-# Articles MAnager app: Server
+# Articles Manager app: Server
 
 An app that lets employees post and vote on articles they've shared or written.
 
