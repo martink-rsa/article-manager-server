@@ -1,14 +1,17 @@
-# Trivia app: Server
+# Articles MAnager app: Server
 
-Todo:
+An app that lets employees post and vote on articles they've shared or written.
 
-1. Input validation for iconId and colorId when user joins room
-2. Remove a player from the game class if they have left the room / closed the browser
-3. Handle playing joining game in progress which will currently set everything back to lobby.
+The challenge of the project is to make use of MySQL while building a full-stack application.
 
-Issues:
+## Prequisites:
 
-1. If the admin player leaves the room, then a new admin will need to be appointed
-2. This does not seem correct: serverIo.to(room).emit('updateGameState', 'LOBBY');
+A MySQL database will be needed, and the correct connection fields populated in the `.env` files.
 
-Should it not be just the player having the state updated?
+## Install:
+
+`yarn`
+
+## Run in development mode:
+
+`yarn dev`
