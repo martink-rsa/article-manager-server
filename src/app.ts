@@ -27,6 +27,33 @@ const connection = mysql.createConnection({
   database: process.env.DB_DATABASE,
 });
 
+/* connection.connect((error) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('MySQL connection established');
+    // connection.query('create database articlesmanagerdbtest', () => {
+    //   console.log('Created database');
+    // });
+  }
+}); */
+
+connection.query(
+  'SELECT * FROM articles ORDER BY id DESC LIMIT 10',
+  function (error: any, result: any) {
+    if (error) {
+      /* return res.status(400).json({
+        message: 'Unable to fetch articles',
+      }); */
+    }
+    /* return res.status(200).json({
+      articles: result,
+    }); */
+    console.log('result');
+    console.log(result);
+  }
+);
+
 // Drops all of the tables so they can be recreated
 // dropTables(connection);
 // Recreates all of the tables
